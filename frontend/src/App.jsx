@@ -6,7 +6,7 @@ import Dashboard from './Dashboard';
 
 function App() {
   return (
-    <Router>
+      <Router basename="/task-tracker">
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
