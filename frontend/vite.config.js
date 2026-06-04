@@ -2,10 +2,15 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
- base: '/task-tracker/',
   plugins: [react()],
+  base: './',
   server: {
-    port: 3000
+    host: true,
+    port: 3000, // <-- ИЗМЕНИТЕ НА 3000
+    hmr: {
+      protocol: 'ws',
+      host: 'localhost',
+      port: 3000
+    }
   }
 })
-
